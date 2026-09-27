@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Notion, usando páginas, banco de dados, propriedades e fórmulas nativas; sem API do Notion.
+Aplicação HTML5 estática publicada no GitHub Pages e incorporada em uma página do Notion; sem backend de dados.
 
 ## Users
 
@@ -24,11 +24,13 @@ O gerador não cria prompts genéricos: ele preserva a sequência do curso, sepa
 
 ## Operating Context
 
-O usuário preenche os dados do projeto no Notion, seleciona a fase atual e copia o prompt gerado para a IA. O mesmo registro acompanha o progresso do projeto.
+O usuário preenche os dados dentro do gerador incorporado no Notion, compara cada prompt original com sua versão adaptada e copia o prompt gerado para a IA. Textos e fotos permanecem no armazenamento local do navegador.
 
 ## Capabilities and Constraints
 
 - Capturar nome, problema, solução, funcionalidades, personas, stack, referências de design e PRD final.
+- Aceitar fotos nas referências gerais de design e nas três referências do Design Context, com prévia, remoção e persistência local.
+- Preservar os 64 prompts de projeto do guia do professor em correspondência individual e na ordem canônica.
 - Gerar prompts por fase na ordem Planejar → Construir → Testar → Iterar.
 - Ordem obrigatória: planejamento; interface com dados simulados; Supabase/migrations/RLS; autenticação e dados reais; colaboração; Stripe; segurança; responsividade; deploy.
 - RLS e isolamento multi-tenant bloqueiam colaboração, billing e deploy.
